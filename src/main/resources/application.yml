@@ -1,0 +1,40 @@
+# spring:
+#   application:
+#     name: documentmind
+#   jackson:
+#     deserialization:
+#       fail-on-unknown-properties: false
+
+#   ai:
+#     openai:
+#       api-key: "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"
+#       base-url: https://api.groq.com/openai/v1
+#       chat:
+#         model: openai/gpt-oss-120b
+#         extra-body:                                                                                                                    
+#                 include_reasoning: false 
+#         # temperature: 0.5
+
+# server:
+#   port: 8082
+
+
+
+# # Actuator & Prometheus Exposure
+# # management:
+# #   endpoints:
+# #     web:
+# #       exposure:
+# #         include: health,info,prometheus,metrics
+# #   endpoint:
+# #     health:
+# #       show-details: always
+# #   metrics:
+# #     tags:
+# #       application: chatbot-monitoring
+
+# # Logging configuration
+# logging:
+#   level:
+#     org.springframework.ai: DEBUG
+#     org.springframework.ai.chat.client.advisor: DEBUG
