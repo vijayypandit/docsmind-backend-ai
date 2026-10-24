@@ -7,7 +7,7 @@
 
 #   ai:
 #     openai:
-#       api-key: "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"
+#       api-key: ""
 #       base-url: https://api.groq.com/openai/v1
 #       chat:
 #         model: openai/gpt-oss-120b
