@@ -73,18 +73,6 @@ public class GlobalExceptionHandler {
                         .build());
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiResponse<Void>> handleGeneralException(Exception ex) {
-        logger.error("Internal Server Error: ", ex);
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(ApiResponse.<Void>builder()
-                        .success(false)
-                        .message("An unexpected error occurred: " + ex.getMessage())
-                        .data(null)
-                        .timestamp(LocalDateTime.now())
-                        .build());
-    }
-
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<?> handleIllegalArgument(IllegalArgumentException ex) {
 logger.warn("Illegal Argument Exception: {}", ex.getMessage());
